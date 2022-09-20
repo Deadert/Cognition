@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HomeWork
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string fullName = "Антонова Кира Дмитриевна";
+            int age = 18;
+            string email = "Red21@gmail.com";
+            float scoresProgramming = 27.5f;
+            float scoresMathematics = 13.2f;
+            float scoresPhysics = 7.7f;
+            string pattern = "Ф.И.О. {0} \nВозраст {1} \nЭлектронная Почта {2} \nБаллы по программированию {3} \nБаллы по математике {4} \nБаллы по физике {5}";
+            Console.WriteLine(pattern,
+                              fullName,
+                              age,
+                              email,
+                              scoresProgramming,
+                              scoresMathematics,
+                              scoresPhysics);
+            Console.ReadKey();
+
+
+            float result = 0;
+            float medResult = 0;
+            result = scoresProgramming + scoresMathematics + scoresPhysics;
+            medResult += result;
+            medResult /= 3;
+            Console.WriteLine($"Общий балл по всем предметам: {result}. \nСредний балл по предметам: {medResult}");
+            Console.ReadKey();
+        }
+    }
+}
